@@ -2,12 +2,11 @@
 
 A machine learning system that predicts which Physics chapters are most likely to appear in Class 12th board exams based on historical patterns.
 
-## 🎯 Key Results
+## Results, honestly
 
-- **92.86% F1 Score** on 2025 holdout data
-- **100% Recall** - Predicted ALL chapters that appeared
-- **86.67% Precision** - Most predictions were accurate
-- Trained on 716 questions from 2016-2024
+- Trained on 716 questions from 2016-2024, tested on the 2025 paper.
+- The 2025 evaluation below isn't a meaningful accuracy claim. It scores the top 15 predictions out of 15 topics, which is effectively the whole syllabus, so predicting every chapter would get the same score: 100% recall and about 93% F1.
+- The potentially useful output is the ranking of chapters, which hasn't been tested against a baseline. A fair test would compare it with simple historical frequency over several held-out years.
 
 ## 📁 Project Structure
 
@@ -115,6 +114,9 @@ Then open your browser to `http://localhost:8501`
 ### Model Performance
 
 #### Metrics (Top-15 Predictions)
+
+These numbers come from selecting all 15 topics, so they say little about the model. See "Results, honestly" above.
+
 | Metric | Score |
 |--------|-------|
 | Precision@15 | 86.67% |
